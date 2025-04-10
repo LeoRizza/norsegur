@@ -347,6 +347,7 @@ main section {
     font-style: normal;
     font-weight: 600;
     line-height: 120%;
+
 }
 
 .contacto-grid {
@@ -363,6 +364,8 @@ main section {
     border-radius: 44px;
     box-shadow: 16px 16px 20px rgba(0, 0, 0, 0.3);
     transition: box-shadow 0.2s ease, transform 0.1s ease;
+    user-select: none;
+    text-decoration: none;
     user-select: none;
 }
 
