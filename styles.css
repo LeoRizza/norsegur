@@ -403,6 +403,7 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    padding: 0 7vw;
 }
 
 .footer-links {
@@ -432,6 +433,7 @@ footer {
     color: white;
     text-decoration: none;
     transition: color 0.3s;
+    font-size: 16px;
 }
 
 .footer-links a:hover {
@@ -529,7 +531,7 @@ footer {
 
     .footer-links {
         flex-wrap: wrap;
-        width: 80vw;
+        width: 60vw;
     }
 
     .navbar-expand-lg .navbar-nav .btn-nav {
@@ -539,5 +541,19 @@ footer {
 
     .navbar-nav {
         margin-top: 30px;
+    }
+
+    main section {
+        margin: 0 2vw;
+        margin-top: 100px;
+    }
+
+    .row {
+        margin-top: 0;
+        margin-right: 0; 
+    }
+
+    .footer-links a {
+        font-size: 14px;
     }
 }
