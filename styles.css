@@ -447,6 +447,12 @@ footer {
     text-align: center;
     font-size: 14px;
     margin: 0;
+    
+}
+
+.byLR a {
+    text-decoration: none;
+    color: #FFF;
 }
 
 @media (max-width: 990px) {
