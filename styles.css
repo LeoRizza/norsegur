@@ -1,0 +1,543 @@
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fonts/Gotham-Book.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+    src: url('./fonts/GOTHAM-BOLD.TTF') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gotham', sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #1a1a1a;
+    overflow-x: hidden;
+}
+
+/* burger */
+
+.burger {
+    position: relative;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    cursor: pointer;
+    display: block;
+}
+
+.burger input {
+    display: none;
+}
+
+.burger span {
+    display: block;
+    position: absolute;
+    height: 3px;
+    width: 100%;
+    background: white;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .25s ease-in-out;
+}
+
+.burger span:nth-of-type(1) {
+    top: 0px;
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(2) {
+    top: 50%;
+    transform: translateY(-50%);
+    transform-origin: left center;
+}
+
+.burger span:nth-of-type(3) {
+    top: 100%;
+    transform-origin: left center;
+    transform: translateY(-100%);
+}
+
+.burger input:checked~span:nth-of-type(1) {
+    transform: rotate(45deg);
+    top: 0px;
+    left: 5px;
+}
+
+.burger input:checked~span:nth-of-type(2) {
+    width: 0%;
+    opacity: 0;
+}
+
+.burger input:checked~span:nth-of-type(3) {
+    transform: rotate(-45deg);
+    top: 28px;
+    left: 5px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #070b44;
+    color: white;
+    padding: 1vw 5vw 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navItemsDiv {
+    justify-content: flex-end;
+}
+
+
+.navbar-expand-lg .navbar-nav .btn-nav {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.btn-nav:hover {
+    background-color: #353B94;
+    color: white;
+}
+
+/* Hero */
+.hero {
+    background: url('/img/portada.avif') center/cover no-repeat;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    text-align: left;
+}
+
+.hero-content {
+    padding-left: 5vw;
+    position: absolute;
+    max-width: 850px;
+}
+
+.heroH1 {
+    color: #FFF;
+    font-family: 'Gotham', sans-serif;
+    text-overflow: ellipsis;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 90.833%;
+}
+
+.heroText {
+    overflow: hidden;
+    color: #FFF;
+    text-overflow: ellipsis;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 152.632%;
+    font-family: 'Gotham', sans-serif;
+    margin-bottom: 20px;
+}
+
+.btn-yellow {
+    font-family: 'Gotham', sans-serif;
+    text-decoration: none;
+    display: flex;
+    width: 188px;
+    height: 51px;
+    padding: 0px 31px 1px 31px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 51px;
+    background-color: #ffef09;
+    overflow: hidden;
+    color: #000000;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    transition: all 0.3s;
+}
+
+
+.btn-yellow:hover {
+    transform: scale(1.1);
+}
+
+/* Secciones */
+main section {
+    margin: 0 5vw;
+    margin-top: 150px;
+}
+
+
+.nosotros-info {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.nosotros-texto {
+    background-color: #DEDEDA;
+    order: -1;
+    padding: 48px 40px;
+    margin: 0;
+}
+
+.nosotros-expertos {
+    background-color: #DEDEDA;
+    padding: 48px 40px;
+    margin: 0;
+}
+
+.nosotrosDiv1 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.nosotrosImgDiv {
+    padding: 0;
+}
+
+.nosotrosImg {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+
+.nosotrosTitle {
+    font-size: 50px;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.nosotrosSubtitle {
+    font-size: 20px;
+    margin: 15px 0;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+/* formacion */
+
+.formacion {
+    text-align: center;
+    font-weight: 400;
+    font-size: 32px;
+    color: #5D5D5D;
+    line-height: 120%;
+}
+
+/* Servicios */
+.serviciosTitle {
+    text-align: left;
+    color: #000;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.serviciosSubtitle {
+    color: #5D5D5D;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.serviciosIcono {
+    width: 50px;
+}
+
+.servicios-grid {
+    gap: 5vw;
+    justify-content: center;
+}
+
+.servicio {
+    background-color: #DEDEDA;
+    padding: 31px 21px 26px;
+    text-align: center;
+    width: 390px;
+}
+
+.col {
+    flex: none;
+}
+
+
+/* Por qué elegirnos */
+
+.porqueTitle {
+    color: #000;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%;
+    margin-bottom: 20px;
+}
+
+.porqueText {
+    color: #5D5D5D;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 120%;
+}
+
+/* Contacto */
+.contactoH2 {
+    overflow: hidden;
+    color: #000;
+    text-align: center;
+    text-overflow: ellipsis;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.contactoSubtitle {
+    color: #5D5D5D;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+.spanContacto {
+    color: #5D5D5D;
+    font-family: Gotham;
+    font-size: 19px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+.contacto-grid {
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.contacto-item {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    width: 400px;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 44px;
+    box-shadow: 16px 16px 20px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.2s ease, transform 0.1s ease;
+    user-select: none;
+}
+
+.contacto-item:active {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+.redesSubtitle {
+    color: #5D5D5D;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    margin: 20px 0;
+}
+
+.redesText {
+    color: #5D5D5D;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 161.111%;
+}
+
+.logoHome {
+    width: 120px;
+}
+
+/* Footer */
+footer {
+    background-color: #070b44;
+    color: white;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1rem;
+    padding-left: 0;
+}
+
+.footerCopy {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 350;
+    line-height: 100%;
+    margin: 0;
+}
+
+.logoFooter {
+    width: 200px;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: #ffef09;
+}
+
+.byLR {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+}
+
+@media (max-width: 990px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .nosotrosDiv1 {
+        flex-direction: column;
+        margin: 0 1vw;
+    }
+
+    .hero-content {
+        width: 80%;
+    }
+
+    .hero {
+        justify-content: center;
+    }
+
+    .heroH1 {
+        font-size: 24px;
+    }
+
+    .heroText {
+        font-size: 16px;
+    }
+
+    .nosotrosTitle {
+        font-size: 24px;
+    }
+
+    .nosotrosSubtitle {
+        font-size: 18px;
+    }
+
+    .nosotrosText {
+        font-size: 16px;
+    }
+
+    .nosotros-texto {
+        order: 1;
+    }
+
+    .serviciosTitle {
+        font-size: 24px;
+    }
+
+    .serviciosSubtitle {
+        font-size: 18px;
+    }
+
+    .formacion {
+        font-size: 24;
+    }
+
+    .porqueTitle {
+        font-size: 24px;
+    }
+
+    .porqueText {
+        font-size: 16px;
+    }
+
+    .contactoH2 {
+        font-size: 24px;
+    }
+
+    .contactoSubtitle {
+        font-size: 16px;
+    }
+
+    .servicios-grid {
+        margin: 0 1vw;
+    }
+
+    .contacto-item {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .footerCopy {
+        font-size: 12px;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        width: 80vw;
+    }
+
+    .navbar-expand-lg .navbar-nav .btn-nav {
+        display: flex;
+        justify-content: center;
+    }
+
+    .navbar-nav {
+        margin-top: 30px;
+    }
+}
