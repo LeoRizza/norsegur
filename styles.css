@@ -115,7 +115,7 @@ body {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    transition: color 0.3s;
+    transition: all 0.5s;
     border-radius: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -123,7 +123,7 @@ body {
     padding-left: 30px;
 }
 
-.btn-nav:hover {
+.navbar-expand-lg .navbar-nav .btn-nav:hover {
     background-color: #353B94;
     color: white;
 }
