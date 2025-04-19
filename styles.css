@@ -93,6 +93,11 @@ body {
     box-shadow: none;
 }
 
+
+.navbar-toggler {
+    border: none
+}
+
 /* Navbar */
 .navbar {
     background-color: #070b44;
@@ -602,6 +607,7 @@ footer {
 
     .navbar-nav {
         margin-top: 30px;
+        margin-bottom: 20px;
     }
 
     main section {
