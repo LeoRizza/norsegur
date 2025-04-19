@@ -201,11 +201,26 @@ main section {
     margin-top: 150px;
 }
 
+.carousel-container {
+    width: 80vw;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    display: flex;
+    justify-content: flex-start;
+    margin: 0 auto;
+    gap: 16px;
+    padding-bottom: 10px;
+    scrollbar-width: none;
+}
 
 .nosotros-info {
     display: flex;
     flex-direction: column;
     position: relative;
+}
+
+.nosotros-info-web {
+    display: none;
 }
 
 .nosotros-texto {
@@ -226,6 +241,7 @@ main section {
     flex-direction: row;
     position: relative;
 }
+
 
 .nosotrosImgDiv {
     padding: 0;
@@ -285,7 +301,7 @@ main section {
 }
 
 .servicios-grid {
-    gap: 5vw;
+    gap: 4vw;
     justify-content: center;
 }
 
@@ -447,7 +463,7 @@ footer {
     text-align: center;
     font-size: 14px;
     margin: 0;
-    
+
 }
 
 .byLR a {
@@ -455,14 +471,50 @@ footer {
     color: #FFF;
 }
 
+.carousel-card {
+    flex: 0 0 80%;
+    max-width: 350px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    scroll-snap-align: start;
+}
+
+
 @media (max-width: 990px) {
+
+
+    .nosotros-expertos {
+        padding: 30px 20px;
+    }
+    .nosotros-texto {
+        padding: 30px 20px;
+    }
+
+    .nosotros-info {
+        display: none;
+    }
+
+    .nosotros-info-web {
+        display: block;
+    }
+
     .footer-content {
         flex-direction: column;
     }
 
+    .carousel-container {
+        margin: 0;
+        width: 100%;
+    }
+
+    .cardLeo {
+        width: 80%;
+    }
+
     .nosotrosDiv1 {
         flex-direction: column;
-        margin: 0 1vw;
+        margin: 0;
+        height: 100%;
+        background: #DEDEDA;
     }
 
     .hero-content {
@@ -506,7 +558,7 @@ footer {
     }
 
     .formacion {
-        font-size: 24;
+        font-size: 28px;
     }
 
     .porqueTitle {
@@ -554,12 +606,12 @@ footer {
 
     main section {
         margin: 0 2vw;
-        margin-top: 100px;
+        margin-top: 70px;
     }
 
     .row {
         margin-top: 0;
-        margin-right: 0; 
+        margin-right: 0;
     }
 
     .footer-links a {
