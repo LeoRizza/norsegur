@@ -551,6 +551,7 @@ footer {
 
     .hero {
         justify-content: center;
+        height: 50vh;
     }
 
     .heroH1 {
